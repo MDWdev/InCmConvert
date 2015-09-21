@@ -29,16 +29,10 @@ class ViewController: UIViewController {
 
     @IBAction func convertTemp(sender: AnyObject) {
         // Convert from inches to cm
-        func inchesToCentimeters(depthInInches:Double) ->Double {
-            let depthInCentimeters = depthInInches * 2.54
-            return depthInCentimeters as Double
-        }
-        
-        // Convert from cm to inches
-        func centimetersToInches(depthInCentimeters:Double) ->Double {
-            let depthInInches = depthInCentimeters / 2.54
-            return depthInInches as Double
-        }
+        let inches = Double(TextToConvert.text!)
+        let cm = (inches! * 2.54)
+        let cmString = cm.description
+        ConvertResultLabel.text = cmString
         
     }
 
